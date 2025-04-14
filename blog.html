@@ -5,51 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-          background-image: url('https://wallpapertag.com/wallpaper/full/b/f/4/139229-full-size-cool-powerpoint-backgrounds-1926x1206.jpg');
-          background-repeat:no-repeat;
-          color: white;
-          font-family: Arial, sans-serif;
-          line-height: 1.6;
-          padding: 20px;
-          background-size: cover;
-          
-        }
+    :root {
+      --primary-color: #1a237e;
+      --secondary-color: #3949ab;
+      --accent-color: #5c6bc0;
+      --text-color: #2c3e50;
+      --light-bg: rgba(224, 234, 252, 0.8);
+    }
     
-        .content a {
-          text-decoration: none;
-          color: #ffcc00;
-        }
-    
-        h1, h2, em {
-          color: #ffcc00;
-        }
-    
-        input::placeholder, textarea::placeholder {
-          color: white;
-        }
-    
-        .section {
-          display: flex;
-          align-items: flex-start;
-          gap: 20px;
-          margin-bottom: 30px;
-        }
-    
-        .section img {
-          width: 180px;
-          height: auto;
-          border-radius: 10px;
-        }
-    
-        .section-right {
-          flex-direction: row-reverse;
-        }
-    
-        ul, ol {
-          margin-left: 20px;
-        }
-      </style>
+    body {
+      background:
+        linear-gradient(to right, var(--light-bg), rgba(207, 222, 243, 0.8)),
+        url("https://tse1.mm.bing.net/th?id=OIP.20zQor_m7vpms5UzaRHFlAHaE5&pid=Api") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 30px;
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 3px;
+      background: var(--accent-color);
+      border-radius: 3px;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 35px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+
+    h2 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 10px;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .content-wrapper.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-container {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 250px; 
+      object-fit: cover; 
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.02);
+    }
+
+    .button-link {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: #ffffff;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.3s;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .button-link:hover {
+      background-color: var(--primary-color);
+      transform: scale(1.05);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    li::before {
+      content: "•";
+      color: var(--accent-color);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .achievement-list {
+      columns: 2;
+      column-gap: 30px;
+    }
+
+    .achievement-list li {
+      break-inside: avoid;
+    }
+
+    @media (max-width: 768px) {
+      .content-wrapper, .content-wrapper.reverse {
+        flex-direction: column;
+      }
+      
+      .image-container {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .achievement-list {
+        columns: 1;
+      }
+
+      .image-container img {
+        height: auto; 
+        max-height: 250px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      
+      section {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .button-link {
+        width: 100%;
+      }
+    }
+  </style>
         
 </head>
 <body>
