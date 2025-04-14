@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <style>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-image: url("images/nature3.jpg");
+        }
+    
+        header {
+          background-color: #33333300;
+          color: rgb(255, 255, 255);
+          padding: 1rem 2rem;
+          text-align: center;
+        }
+    
+        h2 {
+          margin-top: 1.5rem;
+          text-align: center;
+          color: #ffef3bfb;
+        }
+    
+        p {
+          text-align: center;
+          color: #f2ff3b;
+          margin-bottom: 2rem;
+        }
+    
+        .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          padding: 20px;
+        }
+    
+        .gallery img {
+          width: 250px;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          transition: transform 0.2s ease-in-out;
+        }
+    
+        .gallery img:nth-child(1),
+        .gallery img:nth-child(4),
+        .gallery img:nth-child(10),
+        .gallery img:nth-child(14),
+        .gallery img:nth-child(18),
+        .gallery img:nth-child(19) {
+          width: 400px;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <header>
+        <h1> Blog</h1>
+      </header>
+    
+      <h2 id="image">Gallery</h2>
+      <p>Below are glimpses of sundar pichai and personal life:</p>
+    
+      <div class="image">
+        <!-- Replace these image paths with actual images of sundar pichai-->
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Sundar_Pichai_-_2023_%28cropped%29.jpg" alt="sundar pichai">
     <img src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/canvas/2025/01/29/2441807e-c22f-4a5a-bf3c-4fcce6a80d98_1d927efe.jpg?itok=ujYX4JxY&v=1738139782" alt="sundar&anjali">
     <img src="https://www.financialexpress.com/wp-content/uploads/2023/09/sundar-pichai-1.png" alt="marriage life">
@@ -18,5 +81,6 @@
     <img src="https://static01.nyt.com/images/2015/08/11/business/11pichaisub/11pichaisub-superJumbo.jpg" alt="sunadar speech">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_wSRD5WdnzBrAMrOfQ0FOtFHal6E4Niz_w&s" alt="sundar journey">
     <img src="https://i.insider.com/60ba4870e459cb0018a2c382?width=700" alt="sundar success">
+      </div>
     </body>
     </html>
